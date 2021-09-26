@@ -12,7 +12,7 @@ def decrypt():
     for shift in range(0,26):
         for x in ciphertext:
             potentialPlainText+=charset[(charset.index(x)+ shift)%len(charset)]
-        print ("Backward Shift with "+str(shift)+" "+potentialPlainText)
+        print ("Forward Shift with "+str(shift)+" "+potentialPlainText)
         potentialPlainText=""
     
 
