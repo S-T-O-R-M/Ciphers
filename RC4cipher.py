@@ -19,8 +19,8 @@ def pseudo_random_generation_algorithm():
     i = j = 0
     numberOfBitsNeeded = 4
     while numberOfBitsNeeded > 0:
-        i = (i+1)%8
-        j = (j+S[i])%8
+        i = (i+1)%len(S)
+        j = (j+S[i])%len(S)
         S[i],S[j] = S[j],S[i]
         
         KS = S[(S[i]+S[j]) % len(S)]
